@@ -83,10 +83,147 @@ Section:NewButton("Auto Farm Hoops", "Click to farm Hoops", function()
     end
 end)
 
+--------------------------------------------------
 
+local Tab = Window:NewTab("Eggs")
+local Section = Tab:NewSection("City")
+
+Section:NewButton("Blue Crystal", "Opens a Blue Crystal", function()
+
+    local args = {
+        [1] = "openCrystal",
+        [2] = "Blue Crystal"
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("openCrystalRemote"):InvokeServer(unpack(args))
+    
+    game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "Check Your İnventory!";
+        Text  = "You bought a Egg";
+        Icon  = "rbxthumb://type=Asset&id=17328930447&w=150&h=150"})
+    Duration = 10;
+
+end)
+
+Section:NewButton("Yellow Crystal", "Opens a Yellow Crystal", function()
+    local args = {
+        [1] = "openCrystal",
+        [2] = "Yellow Crystal"
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("openCrystalRemote"):InvokeServer(unpack(args))
+    
+    game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "Check Your İnventory!";
+        Text  = "You bought a Egg";
+        Icon  = "rbxthumb://type=Asset&id=17328930447&w=150&h=150"})
+    Duration = 10;
+end)
+
+Section:NewButton("Lighting Crystal", "Opens a Lighting Crystal", function()
+    local args = {
+        [1] = "openCrystal",
+        [2] = "Lightning Crystal"
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("openCrystalRemote"):InvokeServer(unpack(args))
+    
+    game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "Check Your İnventory!";
+        Text  = "You bought a Egg";
+        Icon  = "rbxthumb://type=Asset&id=17328930447&w=150&h=150"})
+    Duration = 10;
+end)
+
+Section:NewButton("Purple Crystal", "Opens a Purple Crystal", function()
+    local args = {
+        [1] = "openCrystal",
+        [2] = "Purple Crystal"
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("openCrystalRemote"):InvokeServer(unpack(args))
+    
+    game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "Check Your İnventory!";
+        Text  = "You bought a Egg";
+        Icon  = "rbxthumb://type=Asset&id=17328930447&w=150&h=150"})
+    Duration = 10;
+end)
+
+local Section = Tab:NewSection("Snow City")
+
+Section:NewButton("Snow Egg", "Opens a Snow Egg", function()
+    local args = {
+        [1] = "openCrystal",
+        [2] = "Snow Crystal"
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("openCrystalRemote"):InvokeServer(unpack(args))
+    
+    game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "Check Your İnventory!";
+        Text  = "You bought a Egg";
+        Icon  = "rbxthumb://type=Asset&id=17328930447&w=150&h=150"})
+    Duration = 10;
+end)
+
+local Section = Tab:NewSection("Magma City")
+
+Section:NewButton("Inferno Crystal", "Opens a Inferno Crystal", function()
+    local args = {
+        [1] = "openCrystal",
+        [2] = "Inferno Crystal"
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("openCrystalRemote"):InvokeServer(unpack(args))
+
+    game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "Check Your İnventory!";
+        Text  = "You bought a Egg";
+        Icon  = "rbxthumb://type=Asset&id=17328930447&w=150&h=150"})
+    Duration = 10;
+end)
+
+Section:NewButton("Lava Crystal", "Opens a Lava Crystal", function()
+    local args = {
+        [1] = "openCrystal",
+        [2] = "Lava Crystal"
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("openCrystalRemote"):InvokeServer(unpack(args))
+
+    game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "Check Your İnventory!";
+        Text  = "You bought a Egg";
+        Icon  = "rbxthumb://type=Asset&id=17328930447&w=150&h=150"})
+    Duration = 10;
+end)
+
+local Section = Tab:NewSection("Legends Highway")
+
+Section:NewButton("Electro Legends Crystal", "Opens a Electro Legends Crystal", function()
+    local args = {
+        [1] = "openCrystal",
+        [2] = "Electro Legends Crystal"
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("openCrystalRemote"):InvokeServer(unpack(args))
+
+    game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "Check Your İnventory!";
+        Text  = "You bought a Egg";
+        Icon  = "rbxthumb://type=Asset&id=17328930447&w=150&h=150"})
+    Duration = 10;
+end)
+
+-----------------------------------------------------------
 
 local Tab = Window:NewTab("Islands")
 local Section = Tab:NewSection("Islands")
+
+Section:NewButton("City", "Click to teleport to the City", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-533.456421, 58.4536629, 209.88414, 1.54972076e-06, -0.422563195, -0.906333447, -1, -1.54972076e-06, -9.83476639e-07, -9.83476639e-07, 0.906333447, -0.422563195)
+end)
 
 Section:NewButton("Snow Island", "Click to teleport to the Snow Island", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-574.546753, 9.02351379, 2438.17603, 0.500304699, 0, 0.865849435, 0, 1, 0, -0.865849435, 0, 0.500304699)
@@ -95,6 +232,12 @@ end)
 Section:NewButton("Magma City", "Click to teleport to the Magma City", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2081.32544, 10.6251955, 4268.66943, 0.641288161, -0.298373342, 0.706910789, -0.640437424, 0.299271524, 0.707302272, -0.422598422, -0.906316698, 0.000829875469)
 end)
+
+Section:NewButton("Legends Highway", "Click to teleport to the Legends Highway", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3758.27881, 88.9541321, 5666.34668, -0.422655821, -0.906290174, 0.00088351965, -0.640997291, 0.299622774, 0.706646264, -0.640691161, 0.298101604, -0.707566977)
+end)
+
+---------------------------------------------------
 
 local Tab = Window:NewTab("Player")
 local Section = Tab:NewSection("Player")
@@ -106,6 +249,8 @@ end)
 Section:NewTextBox("JumpPower", "Change your JumpPower", function(Value)
 	game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
 end)
+
+------------------------------------------------
 
 local Tab = Window:NewTab("Others")
 local Section = Tab:NewSection("Credits and Others")
